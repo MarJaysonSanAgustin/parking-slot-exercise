@@ -78,7 +78,14 @@ function App() {
   }))
 
   return (
-    <div><pre>{JSON.stringify(displayValue, null, 2)}</pre></div>
+    <div>
+      <h1>Open App.js to view the simulation</h1>
+      <h2>Open the devtools and console to view the result of the simulation</h2>
+      <p>Available Parking slots (JSON)</p>
+      <code>
+        <pre>{JSON.stringify(displayValue, null, 2)}</pre>
+      </code>
+    </div>
   )
 }
 
