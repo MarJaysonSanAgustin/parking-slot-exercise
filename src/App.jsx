@@ -41,6 +41,7 @@ function App() {
     entranceId: entranceExitIds[0]
   }
 
+  prettyPrint('1. PARKING -----------------------', {});
   prettyPrint('1. SIMULATE CAR (medium sized vehicle) PARKING ==>', truckParking1);
 
   const { id: truckParking1SlotId, size: truckParking1Size } = parkingLot.findSlot({ vehicleSize: truckParking1.vehicleSize, entranceExitId: truckParking1.entranceId });
@@ -57,10 +58,12 @@ function App() {
   prettyPrint('1. TRANSACTION ID ==>', truckParking1Index);
   prettyPrint('PARKING TRANSACTIONS ==>', parkingLot.transactions);
 
+  prettyPrint('1. UNPARKING -----------------------', {});
+
   // unpark truck1
   const truckParking1ParkFee = parkingLot.unpark({
     transactionIndex: truckParking1Index,
-    exitDate: new Date(2022, 6, 8, 14, 0) // July 06, 2022 4:29 PM
+    exitDate: new Date(2022, 6, 6, 16, 29) // July 06, 2022 4:29 PM <- Change this to update fees
   });
 
   prettyPrint('1. PARKING FEE ==>', truckParking1ParkFee);
